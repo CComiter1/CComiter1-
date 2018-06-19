@@ -1,5 +1,5 @@
 export default {
-  secondaryColor: '#BAC3D9',
+  secondaryColor: '#707070',
   accentColor: '#51A3F1',
   errorColor: '#FF4584',
   menuColor: '#35495D',
@@ -8,4 +8,6 @@ export default {
   bodyFontFamily: '\'Roboto\', sans-serif',
   titleFont: 'bold \'Roboto\', sans-serif',
   bodyFont: '\'Roboto\', sans-serif',
+  sBreakPoint: '600px',
+  mBreakPoint: '900px',
 }
