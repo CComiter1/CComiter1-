@@ -11,15 +11,14 @@ import {
 const NavOptionContainer = styled.div`
   height: 100%;
   display: flex;
-  position: fixed;
-  left: 0;
-  top: 0;
   flex-direction: column;
   text-align: center;
+  width: 100%;
 `
 
 const AccentureOption = Option.extend`
   background-color: ${({ theme }) => theme.accentColor};
+  // background-color: black;
   &:hover {
     background-color: ${({ theme }) => theme.menuColor};
   }
@@ -28,13 +27,13 @@ const AccentureOption = Option.extend`
 export default props => (
   <NavOptionContainer>
     <AccentureOption href="./">
-      <i className="fa fa-lg fa-home" />
+      <i className="fa fa-lg fa-phone" />
       <br />
       <br />
       Accenture
     </AccentureOption>
     {
-      props.options.map(option => (
+      props.options && props.options.map(option => (
         <NavOption
           active={option.active}
           key={option.text}

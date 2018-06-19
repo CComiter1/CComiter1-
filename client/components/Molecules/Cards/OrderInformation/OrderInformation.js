@@ -6,16 +6,8 @@ import {
 } from '../../../Molecules'
 import {
   CardBodyBold,
+  TwoCollapsingColumns,
 } from '../../../Atoms'
-
-const OrderHolder = styled.div`
-  column-count: 2;
-  column-gap: 40px;
-  
-  @media (max-width: ${({ theme }) => theme.sBreakPoint}) {
-    column-count: 1;
-  }
-`
 
 const Parent = styled.div`
   padding: 10px 0;
@@ -31,10 +23,10 @@ export default props => (
     {
       <OrderNum>Order: {props.orderNum}</OrderNum>
     }
-    <OrderHolder>
+    <TwoCollapsingColumns>
       <CardRowCollection
         information={props.information}
       />
-    </OrderHolder>
+    </TwoCollapsingColumns>
   </Parent>
 )

@@ -10,6 +10,7 @@ export const Option = styled.a`
   padding: 1rem 1rem;
   background-color: ${prop => prop.theme.menuColor};
   width: 100%;
+  box-sizing: border-box;
 
   &:hover {
     background-color: ${prop => prop.theme.menuActiveColor};
