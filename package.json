@@ -6,29 +6,35 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "parcel ./public/index.html",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 1235",
     "build-storybook": "build-storybook"
   },
   "keywords": [],
   "author": "Ko, Camden <camdenko@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "styled-components": "^3.3.2"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.7",
+    "@storybook/addon-links": "^3.4.7",
+    "@storybook/addons": "^3.4.7",
+    "@storybook/react": "^3.4.7",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
     "eslint": "4.9.0",
     "eslint-config-airbnb": "16.1.0",
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-jsx-a11y": "6.0.2",
     "eslint-plugin-react": "7.4.0",
-    "jest": "^23.1.0",
-    "@storybook/react": "^3.4.7",
-    "@storybook/addon-actions": "^3.4.7",
-    "@storybook/addon-links": "^3.4.7",
-    "@storybook/addons": "^3.4.7",
-    "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0"
+    "jest": "^23.1.0"
   }
 }

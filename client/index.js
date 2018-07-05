@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom'
 import styled, {
   ThemeProvider,
 } from 'styled-components'
+import { Provider } from 'react-redux'
+import store from './store'
 
 import theme from '../theme'
 import {
   Main,
 } from './screens'
 import { NavBar } from './components/Organisms'
+import { CallWindow } from './components/Atoms'
 
 const options = [
   {
@@ -38,19 +41,37 @@ const Body = styled.main`
   margin-left: 110px;
 `
 
-const App = () => (
-  <ThemeProvider theme={theme}>
-    <React.Fragment>
-      <NavBar options={options} />
-      <Body>
-        <Main />
-      </Body>
-    </React.Fragment>
-  </ThemeProvider>
-)
+class App extends React.Component {
+  componentDidCatch(error, info) {
+    console.log(error, info)
+  }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+  render() {
+    return (
+      <ThemeProvider theme={theme}>
+        <React.Fragment>
+          <NavBar options={options} />
+          <Body>
+            <Main />
+          <CallWindow />
+          </Body>
+        </React.Fragment>
+      </ThemeProvider>
+
+    )
+  }
+}
+
+ReactDOM.render(
+  (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  ),
+  document.getElementById('app'),
+)
 
 if (module.hot) {
   module.hot.accept()
 }
+
