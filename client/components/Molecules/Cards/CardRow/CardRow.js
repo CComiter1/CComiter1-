@@ -15,7 +15,7 @@ const Row = styled.span`
 
 export default props => (
   <Row>
-    <CardBody>{props.label}:</CardBody>
-    <CardBodyBold>{props.children}</CardBodyBold>
+    <CardBodyBold>{props.label}:</CardBodyBold>
+    <CardBody>{props.children}</CardBody>
   </Row>
 )
