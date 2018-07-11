@@ -10,7 +10,7 @@ const Row = styled.span`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 0;
+  padding: 20px 20px;  
 `
 
 export default props => (

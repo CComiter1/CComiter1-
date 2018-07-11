@@ -1,37 +1,42 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import { Card, Orders } from '../components/Organisms'
+import { Card, Orders, QuickActions } from '../components/Organisms'
 import { TwoCollapsingColumns } from '../components/Atoms'
 
-const Wrapper = styled.div`
-  margin: 1.5rem;
-  display: flex;
-  flex-direction: column;
+const GridBig = styled.span`
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 15px;
+  padding: 15px 50px;
 `
 
 export default () => (
-  <Wrapper>
-    <TwoCollapsingColumns>
-      <Card
-        header="Caller Information"
-        information={[
-          { label: 'Customer ID#', data: '2344' },
-          { label: 'Name', data: 'Asim' },
-          { label: 'Account Status', data: 'good' },
-          { label: 'Last Pass. Reset', data: 'today' },
-        ]}
-      />
-      <Card
-        header="Company Membership"
-        information={[
-          { label: 'Membership Status', data: 'Gold Member' },
-          { label: 'Renewal Plan', data: 'Monthly Autopay' },
-          { label: 'Renewal Method', data: 'Credit Card' },
-          { label: 'Last Login', data: '6/14/2018' },
-        ]}
-      />
-    </TwoCollapsingColumns>
+  <GridBig>
+    <Card
+      header="Caller Information"
+      information={[
+        { label: 'Customer ID#', data: '2344' },
+        { label: 'Name', data: 'Asim' },
+        { label: 'Account Status', data: 'good' },
+        { label: 'Last Pass. Reset', data: 'today' },
+      ]}
+    />
+    <QuickActions
+      infos={['Reset Password', 'Change Address', 'Pay Bill', 'Edit Payment Information']}
+    />
+    <Card
+      header="Company Membership"
+      information={[
+        { label: 'Membership Status', data: 'Gold Member' },
+        { label: 'Renewal Plan', data: 'Monthly Autopay' },
+        { label: 'Renewal Method', data: 'Credit Card' },
+        { label: 'Last Login', data: '6/14/2018' },
+        { label: 'Last Issue', data: 'Data Breach' },
+        { label: 'First Experience Issue', data: 'Yes It Was' },
+        { label: 'Issue Resolved', data: 'Yes' },
+        { label: 'Issue Return', data: 'No' },
+      ]}
+    />
     <Orders
       orders={[
         {
@@ -58,5 +63,5 @@ export default () => (
         },
       ]}
     />
-  </Wrapper>
+  </GridBig>
 )
