@@ -6,8 +6,11 @@ import {
 } from '../../../Molecules'
 
 const Wrapper = styled.div`
-  margin: 0 1.2rem;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  `
 
 export default props => (
   <Wrapper>
