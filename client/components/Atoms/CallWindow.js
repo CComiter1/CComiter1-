@@ -11,18 +11,29 @@ class CallWindow extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.props.loadInitialData(this.callRef)
-    }, 1000)
+    }, 0)
   }
 
   render() {
-    return <div id="call-window" allow="microphone" ref={this.callRef} />
+    return (
+      <div
+        id="call-window"
+        allow="microphone"
+        ref={this.callRef}
+        style={{ 
+          backgroundColor: '#0099cc',
+          height: '465px',
+          width: '320px',
+          margin: '0 15px',
+        }}
+      />
+    )
   }
 }
 
 const mapState = null
 const mapDispatch = dispatch => ({
   loadInitialData(element) {
-    console.log('ele', element.current)
     dispatch(initCCP(element.current))
   },
 })

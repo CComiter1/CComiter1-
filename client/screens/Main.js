@@ -1,29 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, Orders, QuickActions } from '../components/Organisms'
-import { TwoCollapsingColumns } from '../components/Atoms'
+import { connect } from 'react-redux'
 
-const GridBig = styled.span`
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 15px;
-  padding: 15px 50px;
+import {
+  Card,
+  Orders,
+  QuickActions,
+} from '../components/Organisms'
+import { CallWindow, GridBig } from '../components/Atoms'
+
+const Box = styled.span`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 `
 
-export default () => (
+const Main = props => (
   <GridBig>
     <Card
       header="Caller Information"
-      information={[
-        { label: 'Customer ID#', data: '2344' },
-        { label: 'Name', data: 'Asim' },
-        { label: 'Account Status', data: 'good' },
-        { label: 'Last Pass. Reset', data: 'today' },
-      ]}
+      information={props.user}
     />
-    <QuickActions
-      infos={['Reset Password', 'Change Address', 'Pay Bill', 'Edit Payment Information']}
-    />
+    <Box>
+      <QuickActions
+        infos={['Reset Password', 'Change Address', 'Pay Bill', 'Edit Payment Information']}
+      />
+      <CallWindow />
+    </Box>
     <Card
       header="Company Membership"
       information={[
@@ -65,3 +68,9 @@ export default () => (
     />
   </GridBig>
 )
+
+const mapState = state => ({
+  user: state.user,
+})
+
+export default connect(mapState)(Main)
