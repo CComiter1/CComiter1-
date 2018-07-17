@@ -1,0 +1,41 @@
+Redux from cAm 
+
+model, state, view setup is ow websites are developed. 
+
+Model is how you interface with the website, state is what the website asm view is h0ow the information is protray.ed 
+
+Ex. click a button; says how many times how you clicked it. Model is the button. States is the number of clicks. View is the number being displaye.
+
+Model and they see the view
+Angular is model state and view. 
+
+React is just view. 
+
+Tis is the quedstion, now of. Model is plain HTMLd
+State has a cople diff solutions ; most popular is redux. 
+
+state is as follows. 
+Say you have website with a navbar and a page
+Now click on signin; want the page to now show signin 
+
+one way of doing things, the bad way, is that if we have a massive state that has a done off different stupid attributes. 
+
+What Redux does is:
+    note the followin terms:
+        Store - all the information foer the entire app ; everything is connected to the redux store. 
+        reducers - key value pairs in the noraml this.state object. 
+            eac key has its own reducer. A store is made by combining reducers into a store. 
+        actions - object that has a type and a payload. PAyload is any JS content. 
+        actionCreatoReact components are the view layer for the state. rs
+        thunk and thunk creators
+
+you edit a store by sending an action into a resducer. 
+
+action creator -> action -> reducer -> store 
+
+react components now have access to these acces creators. 
+
+When the store updates, it will update the react components. 
+
+eat sttribute of the state has its own reducer file in redux
+every action  has its own type an what not 
