@@ -1,7 +1,15 @@
 import axios from 'axios'
-
+import cDeep from 'lodash.clonedeep'
 import config from '../../environment'
-import { readUser } from './user';
+import { readUser } from './user'
+/* global connect */
+/* eslint prefer-default-export: null */
+
+export const proccessContact = contact =>
+  (dispatch) => {
+    const information = cDeep(contact.getAttributes())
+    dispatch(readUser(information))
+  }
 
 export const initCCP = element =>
   (dispatch) => {
@@ -13,21 +21,7 @@ export const initCCP = element =>
         allowFramedSoftphone: true,
       },
     })
-    connect.contact(async (contact) => {
-      const attributes = contact.getAttributes()
-      const res = await axios.get(`${config.API_URL}customers/${attributes.customerId.value}`)
-      const parsed = res.json()
-      const locked = parsed.accountLocked
-      const accountStatus = (locked === true || locked === 'true' || locked === 'True') ?
-        'Locked' :
-        'Active'
-      const customer = {
-        customerID: parsed.customerId,
-        name: parsed.firstName,
-        accountStatus,
-        lastResetTimestamp: parsed.passResetTimeStamp,
-        phoneNumber: parsed.phoneNumber,
-      }
-      dispatch(readUser(customer))
+    connect.contact((contact) => {
+      dispatch(proccessContact(contact))
     })
   }
