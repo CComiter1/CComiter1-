@@ -18,7 +18,6 @@ const NavOptionContainer = styled.div`
 
 const AccentureOption = Option.extend`
   background-color: ${({ theme }) => theme.accentColor};
-  // background-color: black;
   &:hover {
     background-color: ${({ theme }) => theme.menuColor};
   }

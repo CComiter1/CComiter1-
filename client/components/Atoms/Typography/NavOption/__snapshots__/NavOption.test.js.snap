@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavOption renders correctly 1`] = `
+.c0 {
+  cursor: pointer;
+  margin: 0;
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+<a
+  className="c0"
+>
+  ONE OPTION
+</a>
+`;
