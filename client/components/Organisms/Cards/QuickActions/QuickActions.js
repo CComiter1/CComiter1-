@@ -12,7 +12,6 @@ const Box = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-between;
 `
 
 const NewButton = ActionButton.extend`
@@ -23,6 +22,10 @@ export default props => (
   <CardBackground>
     <CardHeader>Quick Actions</CardHeader>
     <Line />
-    <Box>{props.infos.map(info => (<NewButton key={info}>{info}</NewButton>))}</Box>
+    <Box>
+      {
+        props.infos.map(info => (<NewButton key={info}>{info}</NewButton>))
+      }
+    </Box>
   </CardBackground>
 )

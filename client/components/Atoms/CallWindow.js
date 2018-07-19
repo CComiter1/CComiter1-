@@ -15,15 +15,20 @@ class CallWindow extends React.Component {
   }
 
   render() {
-    return (<div
-      id="call-window"
-      allow="microphone"
-      ref={this.callRef}
-      style={{
-        height: '465px',
-        width: '320px',
-      }}
-    />)
+    return (
+      <div
+        id="call-window"
+        allow="microphone"
+        ref={this.callRef}
+        style={{ 
+          backgroundColor: '#0099cc',
+          height: '465px',
+          width: '320px',
+          minWidth: '320px',
+          margin: '0 5px',
+        }}
+      />
+    )
   }
 }
 
