@@ -22,5 +22,4 @@ if (module.hot) {
 
 export default store
 export * from './reducers/user'
-export * from './reducers/password'
 export * from './reducers/call'

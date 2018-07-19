@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { initCCP } from '../../store'
+import { initCCP } from '../../../store'
 
-class CallWindow extends React.Component {
+export class CallWindow extends React.Component {
   constructor() {
     super()
     this.callRef = React.createRef()

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavHeader renders correctly 1`] = `
+.c0 {
+  font-size: 2.3rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Roboto',sans-serif;
+}
+
+<h1
+  className="c0"
+>
+  NAV HEADER TEXT
+</h1>
+`;

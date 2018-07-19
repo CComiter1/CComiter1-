@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardRowCollection renders correctly 1`] = `
+.c3 {
+  font-family: 'Roboto',sans-serif;
+  margin: 0;
+}
+
+.c2 {
+  font-family: 'Roboto',sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: space-between;
+  -webkit-box-align: space-between;
+  -ms-flex-align: space-between;
+  align-items: space-between;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      Customer ID#
+      :
+    </p>
+    <p
+      className="c3"
+    >
+      
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      Name
+      :
+    </p>
+    <p
+      className="c3"
+    >
+      Asim
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      Account Status
+      :
+    </p>
+    <p
+      className="c3"
+    >
+      good
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      Last Pass. Reset
+      :
+    </p>
+    <p
+      className="c3"
+    >
+      today
+    </p>
+  </div>
+</div>
+`;
