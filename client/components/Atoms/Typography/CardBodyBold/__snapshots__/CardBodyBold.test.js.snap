@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardBodyBold renders correctly 1`] = `
+.c0 {
+  font-family: 'Roboto',sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+
+<p
+  className="c0"
+>
+  BOLD TEST
+</p>
+`;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardRow renders correctly 1`] = `
+.c2 {
+  font-family: 'Roboto',sans-serif;
+  margin: 0;
+}
+
+.c1 {
+  font-family: 'Roboto',sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    label text
+    :
+  </p>
+  <p
+    className="c2"
+  >
+    children text
+  </p>
+</div>
+`;

@@ -11,7 +11,7 @@ export const getUser = customerID =>
   async (dispatch) => {
     try {
       const user = await axios.get(`${env.API_URL}customers/${customerID}`)
-      dispatch(readUser(user))
+      dispatch(readUser(user.data))
     } catch (error) {
       dispatch(errorUser(error))
     }
@@ -23,7 +23,7 @@ const defaultState = [
   { label: 'Account Status', data: 'Unlocked' },
 ]
 
-const camelorm = (word1) => {
+export const camelorm = (word1) => {
   if (!word1) {
     return ''
   }
@@ -47,17 +47,18 @@ const camelorm = (word1) => {
   return word.join('')
 }
 
-const convertToCustomer = (information) => {
+export const convertToCustomer = (information) => {
   const locked = information.accountLocked.value
   return Object.values(information)
     .map((obj) => {
-      obj.name = camelorm(obj.name)
+      const toReturn = {}
+      toReturn.name = camelorm(obj.name)
       if (obj.name === 'accountLocked') {
-        obj.value = (locked === true || locked === 'true' || locked === 'True') ?
+        toReturn.value = (locked === true || locked === 'true' || locked === 'True') ?
           'Locked' :
           'Active'
       }
-      return obj
+      return toReturn
     })
     .filter(exist => exist.name !== 'Input Customer Id' && exist.value)
     .map(obj => ({ label: obj.name, data: obj.value }))
@@ -66,7 +67,9 @@ const convertToCustomer = (information) => {
 export default (state = defaultState, action) => {
   switch (action.type) {
     case READ_USER:
-      return convertToCustomer(action.user)
+      return Array.isArray(action.user) ?
+        action.user :
+        convertToCustomer(action.user)
     case ERROR_USER:
       return Object.assign(state, {
         error: action.error,

@@ -6,7 +6,7 @@ import {
   CardBodyBold,
 } from '../../../Atoms'
 
-const Row = styled.span`
+const Row = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
