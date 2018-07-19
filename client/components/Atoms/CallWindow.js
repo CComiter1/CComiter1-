@@ -24,7 +24,8 @@ class CallWindow extends React.Component {
           backgroundColor: '#0099cc',
           height: '465px',
           width: '320px',
-          margin: '0 15px',
+          minWidth: '320px',
+          margin: '0 5px',
         }}
       />
     )
