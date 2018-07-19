@@ -11,7 +11,6 @@ import {
   Main,
 } from './screens'
 import { NavBar } from './components/Organisms'
-import { CallWindow } from './components/Atoms'
 
 const options = [
   {
@@ -53,7 +52,6 @@ class App extends React.Component {
           <NavBar options={options} />
           <Body>
             <Main />
-          <CallWindow />
           </Body>
         </React.Fragment>
       </ThemeProvider>
