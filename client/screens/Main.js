@@ -6,6 +6,7 @@ import {
   Card,
   Orders,
   QuickActions,
+  SmartAssist,
 } from '../components/Organisms'
 import { CallWindow, GridBig } from '../components/Atoms'
 
@@ -33,19 +34,7 @@ const Main = props => (
       <CallWindow />
     </Box>
     <Box>
-      <Card
-        header="Company Membership"
-        information={[
-          { label: 'Membership Status', data: 'Gold Member' },
-          { label: 'Renewal Plan', data: 'Monthly Autopay' },
-          { label: 'Renewal Method', data: 'Credit Card' },
-          { label: 'Last Login', data: '6/14/2018' },
-          { label: 'Last Issue', data: 'Data Breach' },
-          { label: 'First Experience Issue', data: 'Yes It Was' },
-          { label: 'Issue Resolved', data: 'Yes' },
-          { label: 'Issue Return', data: 'No' },
-        ]}
-      />
+      <SmartAssist />
       <Orders
         orders={[
           {
