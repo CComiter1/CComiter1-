@@ -9,6 +9,7 @@
     "test-store": "jest ./client/store",
     "test-coverage": "jest --coverage",
     "start-dev": "parcel ./public/index.html",
+    "deploy": "aws s3 sync dist/ s3://callcenter-dev-react.accenturejumpstart.com",
     "build": "parcel build ./public/index.html; aws s3 sync dist/ s3://callcenter-dev-react.accenturejumpstart.com",
     "storybook": "start-storybook -p 1235",
     "build-storybook": "build-storybook",
