@@ -1,4 +1,4 @@
-import React from 'react' 
+import React from 'react'
 import styled from 'styled-components'
 
 const ButtonSpecial = styled.button`
@@ -9,9 +9,10 @@ const ButtonSpecial = styled.button`
     text-align: left
     font-size: 0.9rem;
     margin-right: 20px;
-    width: 150px;
-    display: flex
+    width: 100px;
+    display: flex;
     justify-content: space-between;
+    cursor: pointer;
 `
 
 export default props => (

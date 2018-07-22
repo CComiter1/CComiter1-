@@ -9,7 +9,6 @@ import {
 const Wrapper = styled.div`
   display: flex;
   justify-content: flex-start;
-  margin-right: 100px;
   width: 100%;
 `
 
@@ -35,7 +34,7 @@ export default class ChangeBoxDisappear extends React.Component {
       <Wrapper>
         {
           this.state.boxes.map(box => (
-            <ChangeBox onClick={() => this.removeElement(box.id)}>
+            <ChangeBox key={box.id} onClick={() => this.removeElement(box.id)}>
               {
                 box.text
               }

@@ -9,26 +9,11 @@ import {
 } from '../../../Atoms'
 import { HeaderParagraph, ChangeBoxDisappear } from '../../../Molecules';
 
-// const PushRight = styled.span`
-//   margin-left: 6px
-// `
-
 const Row = styled.span`
   display: flex;
   flex-direction: row;
   justify-content: space-start; 
 `
-
-const Column = styled.span`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-`
-
-// const Push = styled.span`
-//   margin-right: 50px
-// `
 
 export default () => (
   <CardBackground>
