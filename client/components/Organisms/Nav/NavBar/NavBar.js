@@ -11,6 +11,10 @@ const Wrapper = styled.nav`
   z-index: 1;
   display: flex;
   background-color ${({ theme }) => theme.menuColor};
+
+  @media (max-width: ${({ theme }) => theme.mBreakPoint}) {
+    display: none
+  }
 `
 
 export default props => (
