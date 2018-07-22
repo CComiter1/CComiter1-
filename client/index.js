@@ -38,6 +38,9 @@ const options = [
 
 const Body = styled.main`
   margin-left: 110px;
+  @media (max-width: ${prop => prop.theme.mBreakPoint}) {
+    margin: 0;
+  }
 `
 
 class App extends React.Component {
