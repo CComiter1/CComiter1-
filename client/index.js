@@ -26,7 +26,7 @@ const options = [
   },
   {
     text: 'Metrics',
-    href: 'facebook.com',
+    href: 'http://bpdashboard-dev.accenturejumpstart.com/#/home',
     fa: 'fa-bar-chart',
   },
   {
