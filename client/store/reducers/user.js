@@ -49,6 +49,12 @@ export const camelorm = (word1) => {
 
 export const convertToCustomer = (information) => {
   const locked = information.accountLocked.value
+  const order = {
+    'First Name': 1,
+    'Customer Id': 2,
+    'Phone Number': 3,
+    'Account Locked': 4,
+  }
   return Object.values(information)
     .map((obj) => {
       const toReturn = {}
@@ -58,9 +64,12 @@ export const convertToCustomer = (information) => {
           'Locked' :
           'Active'
       }
+      toReturn.value = obj.value
+      toReturn.priority = order[toReturn.name] || 99
       return toReturn
     })
     .filter(exist => exist.name !== 'Input Customer Id' && exist.value)
+    .sort((a, b) => a.priority - b.priority)
     .map(obj => ({ label: obj.name, data: obj.value }))
 }
 

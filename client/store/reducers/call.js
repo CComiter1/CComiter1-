@@ -8,6 +8,7 @@ import { readUser } from './user'
 export const proccessContact = contact =>
   (dispatch) => {
     const information = cDeep(contact.getAttributes())
+    console.log(information)
     dispatch(readUser(information))
   }
 
