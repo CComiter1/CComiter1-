@@ -26,7 +26,7 @@ const AccentureOption = Option.extend`
 export default props => (
   <NavOptionContainer>
     <AccentureOption href="./">
-      <i className="fa fa-lg fa-phone" />
+      <i className="fa fa-3x fa-phone" />
       <br />
       <br />
       Accenture
@@ -41,7 +41,7 @@ export default props => (
           {
             option.fa && (
               <React.Fragment>
-                <i className={`fa fa-lg ${option.fa}`} />
+                <i className={`fa fa-3x ${option.fa}`} />
                 <br />
                 <br />
               </React.Fragment>

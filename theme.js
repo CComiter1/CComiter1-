@@ -1,6 +1,6 @@
 export default {
   secondaryColor: '#707070',
-  accentColor: '#51A3F1',
+  accentColor: '#64AAD7',
   errorColor: '#FF4584',
   menuColor: '#35495D',
   menuActiveColor: '#2C3945',

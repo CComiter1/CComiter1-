@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 export default styled.h3`
-  font-family: 'Roboto', sans-serif;
+  font-family: ${({ theme }) => theme.bodyFont};
   margin: 0;
   margin-bottom: .3rem;
   text-align: center;
   font-size: 1.6rem;
-  color: ${props => props.theme.secondaryColor};
 `

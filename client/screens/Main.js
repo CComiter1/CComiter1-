@@ -17,7 +17,17 @@ const Box = styled.div`
   @media (max-width: ${({ theme }) => theme.mBreakPoint}) {
     flex-direction: column;
     align-items: center;
-    
+  }
+`
+
+const CallContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+
+  @media (max-width: ${({ theme }) => theme.sBreakPoint}) {
+    flex-direction: column;
+    align-items: center;
   }
 `
 
@@ -28,13 +38,14 @@ const Main = props => (
         header="Caller Information"
         information={props.user}
       />
-      <QuickActions
-        infos={['Reset Password', 'Change Address', 'Pay Bill', 'Edit Payment Information']}
-      />
-      <CallWindow />
+      <CallContainer>
+        <QuickActions
+          infos={['Reset Password', 'Change Address', 'Pay Bill', 'Edit Payment Information']}
+        />
+        <CallWindow />
+      </CallContainer>
     </Box>
     <Box>
-      <SmartAssist />
       <Orders
         orders={[
           {
@@ -61,6 +72,7 @@ const Main = props => (
           },
         ]}
       />
+      <SmartAssist />
     </Box>
   </GridBig>
 )
